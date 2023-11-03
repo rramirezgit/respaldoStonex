@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open SansVariable", sans-serif !important;
+  letter-spacing: -0.01em !important;
+  line-height: 150% !important;
+}
+
+body {
+  height: 100%;
+  --first-border-color: var(--primary);
+  --second-border-color: var(--background);
+  --border-size: 0.3rem;
+  --size: 2.5rem;
+}
+
+html {
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+.fsp-button {
+  line-height: 38px !important;
+  font-family: Roboto-regular, Roboto, sans-serif !important;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  background: inherit;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+:hover::-webkit-scrollbar-thumb {
+  background: var(--gray-text);
+  transition: all 0.8s;
+}
+
+/* Filestack loading */
+#__filestack-picker .fsp-loading--folder,
+#__filestack-picker .fsp-loading--folder.center {
+  display: none !important;
+}

@@ -1,0 +1,11 @@
+.laptop {
+  background: url(../../../../../assets/paymentLink/laptop.svg);
+  background-size: contain;
+  z-index: 1;
+  height: 650px;
+  width: 1097.72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

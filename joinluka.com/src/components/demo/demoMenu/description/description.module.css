@@ -1,0 +1,21 @@
+.container {
+  background-color: var(--bg_gray);
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px 25px;
+}
+
+.text-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--dark_gray_text) !important;
+}
+
+.blue-text {
+  color: var(--primary_buttons) !important;
+}

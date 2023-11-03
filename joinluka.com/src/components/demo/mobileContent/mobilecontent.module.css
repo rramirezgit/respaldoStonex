@@ -1,0 +1,61 @@
+.custom-view {
+  position: absolute;
+  width: 62%;
+  background-color: var(--white);
+  z-index: 5;
+  border-radius: 25px;
+  left: 18%;
+}
+
+.close {
+  text-align: end;
+}
+
+.text-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 8px;
+  margin-bottom: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-payment {
+  background-color: var(--bg_gray);
+  height: calc(100% - 73.5px);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.arrow-box {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--arrow_gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  color: var(--arrow_up_gray);
+}
+
+.text {
+  color: var(--dark_gray_text);
+}
+
+.button {
+  height: 40px !important;
+  width: 100% !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+}

@@ -1,0 +1,11 @@
+.title {
+  font-size: 45px !important;
+  color: var(--white) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.landing {
+  overflow-x: hidden;
+  min-width: 390px;
+}

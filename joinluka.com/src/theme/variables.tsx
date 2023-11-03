@@ -1,0 +1,32 @@
+export const sizes = {
+  width: "1300px",
+};
+
+export const colors = {
+  aqua_blue: "#5ae1e2",
+  aqua_blue_a: "#5ae2e21f",
+  arrow_gray: "#D9D9D9",
+  arrow_up_gray: "#565656",
+  bg_gray: "#f6f7fb",
+  black: "#000000",
+  box_gray: "#CED4DA",
+  box_gray_o: "#ced4da5b",
+  dark_blue: "#000853",
+  dark_gray_text: "#2f363e",
+  demo_mobile_gray: "#37414E",
+  demo_mobile_gray_d: "#4A5568",
+  demo_mobile_gray_l: "#37414E",
+  error_state: "#E02D3C",
+  gray_blue_text: "#32435c",
+  gray_text: "#acb9c9",
+  gray_text_dark: "#616f81",
+  gray_text_o: "#acb9c97e",
+  green_luka: "#91e02b",
+  light_blue: "#e3f0ff",
+  light_gray: "#E6ECF6",
+  primary_buttons: "#0878ff",
+  primary_buttons_a: "#0878ff26",
+  secondary: "#09d5e5",
+  title_blue: "#0516b1",
+  white: "#ffffff",
+};

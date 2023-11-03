@@ -1,0 +1,49 @@
+.content {
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  z-index: 5 !important;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 41px;
+  list-style: none;
+  margin: 0;
+  padding: 38px !important;
+  height: 70vh;
+}
+
+.content-joinButton {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 16px !important;
+  line-height: 150%;
+}
+
+.content-menu {
+  width: 60%;
+  text-align: end;
+  right: 60px;
+  position: relative;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.menu {
+  fill: aquamarine;
+}
+
+.itemNav span {
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  line-height: 150% !important;
+  letter-spacing: -0.02em !important;
+}

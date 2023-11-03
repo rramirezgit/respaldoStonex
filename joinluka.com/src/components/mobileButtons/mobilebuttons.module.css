@@ -1,0 +1,11 @@
+.mobile-buttons-container {
+  display: flex;
+  margin: 8px 0px 8px 0px;
+  flex-wrap: wrap;
+}
+
+.mobile-buttons-figure {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}

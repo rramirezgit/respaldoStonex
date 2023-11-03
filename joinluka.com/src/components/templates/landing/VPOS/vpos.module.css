@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--dark_gray_text) !important;
+  font-weight: bold !important;
+}
+
+.title-blue {
+  color: var(--title_blue) !important;
+  font-weight: bold !important;
+  margin-right: 12px !important;
+}
+
+.subtitle {
+  font-size: 24px !important;
+  color: var(--dark_gray_text) !important;
+  font-weight: bold !important;
+}

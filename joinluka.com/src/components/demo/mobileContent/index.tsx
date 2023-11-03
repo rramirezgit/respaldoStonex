@@ -1,0 +1,209 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable multiline-ternary */
+import { Box, Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import styles from "./mobilecontent.module.css";
+import CloseIcon from "@mui/icons-material/Close";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { RootState } from "@/redux/store";
+import { useSelector } from "react-redux";
+import { currencyValues } from "@/logic";
+import PaymentSlider from "./PaymentSlider";
+import supportImg from "@/assets/demoLink";
+import Image from "next/image";
+import { colors } from "@/theme/variables";
+import placeholder from "@/assets/placeholder.svg";
+import demoImgs from "@/assets/demo";
+
+interface Props {
+  type: "gateway" | "link";
+  onLoad: () => void;
+}
+
+const MobileContent = ({ type, onLoad }: Props): JSX.Element => {
+  const demo = useSelector((state: RootState) => state.demo);
+  return (
+    <Box
+      sx={{
+        position: "relative",
+      }}
+    >
+      <Box id={"mobilecontent-container"}>
+        <Image
+          loading="lazy"
+          src={type === "link" ? supportImg.phone : supportImg.phoneGateway}
+          alt="Phone"
+          style={{ height: "100%", width: '100%' }}
+          onLoad={() => onLoad()}
+        />
+      </Box>
+      <Box
+        className={styles["custom-view"]}
+        id={"mobilecontent-custom-container"}
+        sx={{
+          height: "50%",
+          boxShadow: "0px -3.3448px 6.68961px rgba(0, 0, 0, 0.12)",
+        }}
+      >
+        <Box
+          className={styles.close}
+          sx={{
+            margin: "10px 8px 4px 8px",
+          }}
+        >
+          <CloseIcon
+            id={"mobilecontent-close"}
+            sx={{
+              color: colors.dark_gray_text,
+            }}
+          />
+        </Box>
+        <Box className={styles["text-box"]}>
+          {type === "link" ? (
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "flex-start",
+              }}
+            >
+              <Box
+                component={"figure"}
+                id={"mobilecontent-logo"}
+                className={styles.logo}
+              >
+                <Image
+                  src={demo.imgUrl ? demo.imgUrl : placeholder}
+                  alt="Logo"
+                  style={{ maxWidth: "100%", maxHeight: "100%" }}
+                />
+              </Box>
+              <Box>
+                <Typography
+                  id={"mobilecontent-business"}
+                  sx={{
+                    fontWeigth: "400 !important",
+                    color: colors.demo_mobile_gray,
+                    fontFamily: demo.font?.label
+                      ? `${demo.font?.label} !important`
+                      : "Open SansVariable",
+                  }}
+                >
+                  {demo.language?.value === "EN" ? "My business" : "Mi negocio"}
+                </Typography>
+                <Typography
+                  id={"mobilecontent-receipt"}
+                  sx={{
+                    fontWeigth: "400 !important",
+                    color: colors.demo_mobile_gray_l,
+                    fontFamily: demo.font?.label
+                      ? `${demo.font?.label} !important`
+                      : "Open SansVariable",
+                  }}
+                >
+                  {demo.language?.value === "EN" ? "Receipt 123" : "Recibo 123"}
+                </Typography>
+              </Box>
+            </Box>
+          ) : (
+            <Box>
+              <Typography
+                className={styles.text}
+                id={"mobilecontent-text"}
+                sx={{
+                  fontFamily: demo.font?.label
+                    ? `${demo.font?.label} !important`
+                    : "Open SansVariable",
+                }}
+              >
+                {demo.language?.value === "EN"
+                  ? "Select a payment method"
+                  : "Seleccione un método"}
+              </Typography>
+            </Box>
+          )}
+          <Box>
+            <Typography
+              id={"mobilecontent-amount"}
+              sx={{
+                fontWeigth: "700 !important",
+                color: colors.demo_mobile_gray_d,
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : "Open SansVariable",
+              }}
+            >
+              {`${demo.currency?.value ? demo.currency?.value : "$"}55,57 ${
+                demo.currency?.value
+                  ? currencyValues.filter(
+                      (value) => value.label === demo.currency?.label
+                    )[0].value
+                  : "USD"
+              }`}
+            </Typography>
+            <Typography
+              id={"mobilecontent-currency"}
+              sx={{
+                fontWeigth: "400 !important",
+                color: colors.primary_buttons,
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : "Open SansVariable",
+              }}
+            >
+              {demo.language?.value === "EN"
+                ? "Change currency"
+                : "Cambiar moneda"}
+            </Typography>
+          </Box>
+        </Box>
+        <Box className={styles["custom-payment"]}>
+          <Box
+            className={styles["arrow-box"]}
+            id={"mobilecontent-arrow-box"}
+            sx={{
+              top: "-10px",
+              left: "46%",
+            }}
+          >
+            <KeyboardArrowUpIcon
+              id={"mobilecontent-arrow"}
+              className={styles.arrow}
+            />
+          </Box>
+          <PaymentSlider />
+          <Box
+            sx={{
+              padding: "0 10px",
+            }}
+          >
+            <Button
+              className={styles.button}
+              id={"mobilecontent-button"}
+              sx={{
+                backgroundColor: `#${demo.button} !important`,
+                color: `${colors.white} !important`,
+                fontFamily: demo.font?.label
+                  ? `${demo.font?.label} !important`
+                  : "Open SansVariable",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Image
+                id="mobilecontent-lock"
+                alt="Lock"
+                src={demoImgs.lock}
+                style={{ marginRight: "10px" }}
+              />
+              {demo.language?.value === "EN" ? "Pay" : "Pagar"}{" "}
+              {demo.currency?.value ? demo.currency?.value : "$"} 55,57
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default MobileContent;

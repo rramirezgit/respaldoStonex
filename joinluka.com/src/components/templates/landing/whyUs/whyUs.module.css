@@ -1,0 +1,25 @@
+.whyus-container {
+  background-color: var(--bg_gray);
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title {
+  color: var(--dark_gray_text) !important;
+  font-weight: bold !important;
+  align-self: flex-start;
+  margin-bottom: 24px !important;
+}
+
+.text {
+  color: var(--gray_text_dark) !important;
+  font-weight: 500 !important;
+  align-self: flex-start;
+  margin-bottom: 40px !important;
+}
+
+.title-box {
+  width: 100%;
+  max-width: 1300px;
+}

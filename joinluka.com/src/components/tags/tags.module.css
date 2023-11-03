@@ -1,0 +1,19 @@
+.text {
+  color: var(--aqua_blue) !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+}
+
+.tags-container {
+  display: flex;
+  margin: 8px 0px 8px 0px;
+  flex-wrap: wrap;
+}
+
+.tag-container {
+  padding: 10px;
+  background-color: var(--aqua_blue_a);
+  margin-right: 20px;
+  border-radius: 8px;
+  max-height: 40px;
+}
